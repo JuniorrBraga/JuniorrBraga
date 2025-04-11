@@ -52,7 +52,7 @@ Meu objetivo é conquistar uma oportunidade como estagiário em tecnologia, entr
 ### 📫 Como me encontrar
 
 - 📧 Email: bragajuniordev@gmail.com
-- 💼 LinkedIn: [linkedin.com/in/juniorrbraga](https://linkedin.com/in/juniorrbraga)
+- 💼 LinkedIn: [linkedin.com/in/junior-braga-dev](www.linkedin.com/in/junior-braga-dev)
 - 🌐 Portfólio: em breve...
 
 ---
