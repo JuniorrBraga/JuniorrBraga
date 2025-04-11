@@ -51,7 +51,7 @@ Meu objetivo é conquistar uma oportunidade como estagiário em tecnologia, entr
 
 ### 📫 Como me encontrar
 
-- 📧 Email: lucianodev@email.com *(substitua pelo real se quiser)*
+- 📧 Email: bragajuniordev@gmail.com
 - 💼 LinkedIn: [linkedin.com/in/juniorrbraga](https://linkedin.com/in/juniorrbraga)
 - 🌐 Portfólio: em breve...
 
