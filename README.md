@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/junior-braga-dev/">
+  <a href="https://www.linkedin.com/in/junior-braga/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
   <a href="mailto:bragajuniordev@gmail.com">
@@ -81,9 +81,8 @@ Estou em constante aprendizado e busco uma **oportunidade de estágio avançado 
 
 ### 📫 Vamos conversar?
 
-- 💼 LinkedIn: [linkedin.com/in/junior-braga-dev](https://www.linkedin.com/in/junior-braga-dev/)
 - 📧 Email: bragajuniordev@gmail.com
-- 🌐 Perfil do LinkedIn: [Junior Braga](https://www.linkedin.com/in/junior-braga-dev/)
+- 🌐 Perfil do LinkedIn: [Junior Braga](https://www.linkedin.com/in/junior-braga/)
 - 🛠️ Mentor especialista em GHL na AVA Sales.
 
 ---
