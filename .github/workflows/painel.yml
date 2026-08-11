@@ -28,16 +28,30 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Gerar assets/painel.svg
+      # O GITHUB_TOKEN padrão só enxerga repositórios públicos: usar ele faria o
+      # painel publicar números menores que a realidade. Sem o PAT do dono do
+      # perfil, o certo é não mexer no painel.
+      - name: Conferir se há token do dono do perfil
+        id: token
         env:
-          # GITHUB_TOKEN basta enquanto "Include private contributions on my
-          # profile" estiver ligado. Se um dia os números zerarem, crie um PAT
-          # clássico com escopo read:user e salve como secret PAINEL_TOKEN.
-          GH_TOKEN: ${{ secrets.PAINEL_TOKEN || secrets.GITHUB_TOKEN }}
+          PAT: ${{ secrets.PAINEL_TOKEN }}
+        run: |
+          if [ -z "$PAT" ]; then
+            echo "::warning::Secret PAINEL_TOKEN ausente. O painel fica como está."
+            echo "tem=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "tem=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Gerar assets/painel.svg
+        if: steps.token.outputs.tem == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.PAINEL_TOKEN }}
           GH_USUARIO: ${{ github.repository_owner }}
         run: node scripts/build-painel.mjs
 
       - name: Publicar se mudou
+        if: steps.token.outputs.tem == 'true'
         run: |
           if git diff --quiet -- assets/painel.svg; then
             echo "Nenhuma mudança nos números de hoje."

@@ -39,6 +39,20 @@ async function consultar(query, variables) {
   return json.data;
 }
 
+// Um token que não seja do próprio dono do perfil enxerga só os repositórios
+// públicos — e o painel sairia subestimado sem nenhum sinal de erro. Melhor
+// falhar alto do que publicar número menor do que a realidade.
+async function conferirToken() {
+  const { viewer } = await consultar("{ viewer { login } }", {});
+  if (viewer.login.toLowerCase() !== USUARIO.toLowerCase()) {
+    throw new Error(
+      `O token autentica como "${viewer.login}", não como "${USUARIO}". ` +
+        `Ele só veria os repositórios públicos e o painel sairia subestimado. ` +
+        `Configure o secret PAINEL_TOKEN com um PAT do dono do perfil (escopos repo + read:user).`
+    );
+  }
+}
+
 async function coletar() {
   const agora = new Date();
   const de = new Date(Date.UTC(agora.getUTCFullYear() - 1, agora.getUTCMonth(), agora.getUTCDate()));
@@ -232,6 +246,7 @@ ${barras}
 `;
 }
 
+await conferirToken();
 const dados = await coletar();
 mkdirSync(dirname(SAIDA), { recursive: true });
 writeFileSync(SAIDA, desenhar(dados));
