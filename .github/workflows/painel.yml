@@ -1,0 +1,50 @@
+name: Atualiza o painel de produção
+
+on:
+  schedule:
+    # 06:00 UTC = 03:00 em Brasília.
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build-painel.mjs"
+      - ".github/workflows/painel.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: painel
+  cancel-in-progress: true
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Gerar assets/painel.svg
+        env:
+          # GITHUB_TOKEN basta enquanto "Include private contributions on my
+          # profile" estiver ligado. Se um dia os números zerarem, crie um PAT
+          # clássico com escopo read:user e salve como secret PAINEL_TOKEN.
+          GH_TOKEN: ${{ secrets.PAINEL_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_USUARIO: ${{ github.repository_owner }}
+        run: node scripts/build-painel.mjs
+
+      - name: Publicar se mudou
+        run: |
+          if git diff --quiet -- assets/painel.svg; then
+            echo "Nenhuma mudança nos números de hoje."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/painel.svg
+          git commit -m "painel: números de $(date -u +%d/%m/%Y)"
+          git push

@@ -1,93 +1,62 @@
-<h1 align="center">👨‍💻 Luciano Junior Bifano Braga</h1>
+<img src="./assets/header.svg" alt="Junior Braga — Arquiteto de máquinas de venda" width="100%">
 
-<p align="center">
-  🌐 Gestor de Automações & Mentor GHL | 🤖 Prompt Engineer focado em IA Aplicada a Vendas | 📚 Estudante de Ciência da Computação (5º período – Univertix)
-</p>
+## Eu construo sistemas que vendem sozinhos
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/junior-braga/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  <a href="mailto:bragajuniordev@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-  </a>
-</p>
+Sou **Luciano Junior Bifano Braga**. Meu trabalho é transformar processo comercial em máquina: o lead entra, o sistema qualifica, nutre, agenda e devolve para o time humano só o que vale a conversa.
+
+Faço isso na **AVA Partners**, onde lidero automação e IA aplicada a vendas — e onde também formo os times que vão operar essas máquinas depois que elas entram no ar. Em paralelo, curso Ciência da Computação, o que me dá a base para descer ao código quando o no-code trava.
+
+Não entrego fluxograma bonito. Entrego coisa rodando em produção.
 
 ---
 
-### 👨‍💻 Sobre mim
+## O que eu resolvo
 
-Atualmente, atuo na linha de frente da inovação comercial como **Gestor de Automações e IA na AVA Sales**. Minha missão é arquitetar ecossistemas de vendas escaláveis, unindo inteligência e estratégia.
+**Lead que esfria na fila.** Agentes de IA que qualificam por conversa real, pontuam intenção e empurram para o vendedor no momento certo. Não é chatbot de árvore de decisão — é prompt engineering aplicado a funil.
 
-O que eu faço na prática:
-- **Desenvolvimento de Agentes de IA:** Crio agentes personalizados via Prompt Engineering focados na qualificação e conversão de leads (como o projeto "Mestre da Lábia", validado com lucro real).
-- **Implementação de CRM (White-label):** Lidero a estruturação técnica e integração de processos comerciais via GoHighLevel, garantindo a adoção fluida do sistema.
-- **Mentoria e Instrução:** Atuo como mentor especialista em GHL e instrutor na AVA Sales, capacitando equipes a dominarem recursos avançados para escala de negócios com previsibilidade.
+**CRM que ninguém usa.** Implantação de GoHighLevel white-label ponta a ponta: estrutura, integração, migração e treinamento. O sistema só serve se o time adotar, então a adoção faz parte da entrega.
 
-Paralelamente à minha atuação profissional, sou um **estudante dedicado de Ciência da Computação**, onde aplico as bases teóricas de algoritmos e estrutura de dados para otimizar meus fluxos de automação e integração técnica.
-
-Estou em constante aprendizado e busco uma **oportunidade de estágio avançado ou vaga júnior em tecnologia** (foco em IA, Backend ou Automações complexas) onde eu possa entregar valor real com soluções criativas e funcionais.
+**Trabalho repetitivo que come a margem.** Esteiras que produzem em escala — edição de vídeo, geração de criativos, funis multi-nicho, relatórios. O que era hora de gente vira processo que roda de madrugada.
 
 ---
 
-### 🧰 Stack Técnico & Ferramentas
+## Máquinas em produção
 
-#### 🤖 Inteligência Artificial & No-Code/Low-Code
-<div align="left">
-  <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Claude-d97757?style=for-the-badge&logo=claude&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Gemini-8e75c2?style=for-the-badge&logo=gemini&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Grok-000000?style=for-the-badge&logo=x&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Prompt_Engineering-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Lovable.dev-000000?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Base44-darkblue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/KlingAI_/_Sora-red?style=for-the-badge"/>
-</div>
+| Projeto | O que faz | Stack |
+|---|---|---|
+| **Mestre da Lábia** | Agente de IA de qualificação e conversão de leads por conversa. Validado com lucro real. | TypeScript · LLM |
+| **[MatchGoal](https://github.com/JuniorrBraga/matchgoal)** | SaaS de análise estatística de futebol com IA para a Copa 2026. | Turborepo · pnpm · TS |
+| **Low Ticket Machine** | Esteira de produtos digitais com funil gamificado multi-nicho. | Next.js · Supabase |
+| **Afiliado Machine** | Esteira semi-automática de vídeos de afiliado: da captura ao post aprovado. | Python · FFmpeg · Whisper |
+| **AvaZap CRM+** | Integração de WhatsApp e pipeline comercial sobre GoHighLevel. | TypeScript · API GHL |
+| **Motor de Edição** | Automação de edição e legendagem de vídeo em lote para a operação. | Python · FFmpeg |
 
-#### 🔧 Automação & CRM
-<div align="left">
-  <img src="https://img.shields.io/badge/GoHighLevel-blue?style=for-the-badge&logo=gohighlevel&logoColor=white"/>
-  <img src="https://img.shields.io/badge/n8n-E32029?style=for-the-badge&logo=n8n&logoColor=white"/>
-  <img src="https://img.shields.io/badge/API_Integrations-orange?style=for-the-badge"/>
-</div>
-
-#### 💻 Desenvolvimento & Backend (Em evolução)
-<div align="left">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-  <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
-</div>
+> A maior parte dos repositórios é privada por serem sistemas de clientes em operação. Posso mostrar arquitetura e demo em conversa.
 
 ---
 
-### 📈 GitHub Stats
+## Painel de produção
 
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=JuniorrBraga&show_icons=true&theme=tokyonight&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JuniorrBraga&layout=compact&theme=tokyonight"/>
-</div>
+<img src="./assets/painel.svg" alt="Painel de produção com números do GitHub atualizados diariamente" width="100%">
 
----
-
-### 📉 Contribuições recentes
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=JuniorrBraga&theme=tokyo-night&hide_border=true"/>
-</div>
+<sub>Gerado automaticamente todo dia pela [Action deste repositório](.github/workflows/painel.yml), direto da API do GitHub. Sem número inflado.</sub>
 
 ---
 
-### 📫 Vamos conversar?
+## Ferramentas
 
-- 📧 Email: bragajuniordev@gmail.com
-- 🌐 Perfil do LinkedIn: [Junior Braga](https://www.linkedin.com/in/junior-braga/)
-- 🛠️ Mentor especialista em GHL na AVA Sales.
+| Domínio | Stack |
+|---|---|
+| **IA aplicada** | Claude · GPT · Gemini · Prompt Engineering · Whisper |
+| **Automação & CRM** | GoHighLevel · n8n · integrações de API · webhooks |
+| **Produto** | TypeScript · Next.js · React · Supabase · Postgres |
+| **Backend & dados** | Python · Django · FFmpeg · SQL |
+| **Base** | Git · GitHub Actions · Ciência da Computação (Univertix) |
 
 ---
 
-<p align="center">
-  🙌 Obrigado por visitar meu perfil!  
-  Vamos orquestrar o futuro com IA juntos? 🚀
-</p>
+## Vamos conversar
+
+Se você tem um processo comercial que depende de gente fazendo a mesma coisa todo dia, provavelmente dá para automatizar boa parte dele.
+
+**[LinkedIn](https://www.linkedin.com/in/junior-braga/)** · **[bragajuniordev@gmail.com](mailto:bragajuniordev@gmail.com)**
