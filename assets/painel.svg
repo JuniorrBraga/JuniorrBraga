@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img" aria-label="Painel de produção: 24 projetos iniciados em 2026, 45 repositórios, 199 contribuições em 12 meses.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img" aria-label="Painel de produção: 5 projetos iniciados em 2026, 20 repositórios, 200 contribuições em 12 meses.">
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <circle cx="1" cy="1" r="1" fill="#243350"/>
@@ -59,11 +59,11 @@
   <text class="mono rotulo" x="152" y="62">PAINEL DE PRODUÇÃO</text>
   <text class="mono rotulo" x="1090" y="62" text-anchor="end">ATUALIZADO 11 ago 2026</text>
 
-  <text class="sans numero" x="130" y="152" fill="#FFB020">24</text>
+  <text class="sans numero" x="130" y="152" fill="#FFB020">5</text>
   <text class="mono rotulo" x="132" y="180">PROJETOS EM 2026</text>
-  <text class="sans numero" x="370" y="152" fill="#E8EDF7">45</text>
+  <text class="sans numero" x="370" y="152" fill="#E8EDF7">20</text>
   <text class="mono rotulo" x="372" y="180">REPOSITÓRIOS</text>
-  <text class="sans numero" x="610" y="152" fill="#E8EDF7">199</text>
+  <text class="sans numero" x="610" y="152" fill="#E8EDF7">200</text>
   <text class="mono rotulo" x="612" y="180">CONTRIBUIÇÕES · 12M</text>
   <text class="sans numero" x="850" y="152" fill="#E8EDF7">53</text>
   <text class="mono rotulo" x="852" y="180">PULL REQUESTS · 12M</text>
@@ -73,9 +73,9 @@
   <text class="mono titulo" x="130" y="256">PROJETOS INICIADOS POR MÊS · ÚLTIMOS 12 MESES</text>
   <line x1="130" y1="405" x2="1090" y2="405" stroke="#243350" stroke-width="1"/>
 
-    <rect x="130" y="300" width="56.2" height="104" rx="3" fill="url(#barra)"/>
-    <rect class="brilho" style="animation-delay:0.00s" x="130" y="300" width="56.2" height="104" rx="3" fill="url(#pulso)"/>
-<text class="mono valor" x="158.08333333333334" y="289" text-anchor="middle" fill="#6E7E99">6</text>
+    <rect x="130" y="369" width="56.2" height="35" rx="3" fill="url(#barra)"/>
+    <rect class="brilho" style="animation-delay:0.00s" x="130" y="369" width="56.2" height="35" rx="3" fill="url(#pulso)"/>
+<text class="mono valor" x="158.08333333333334" y="358" text-anchor="middle" fill="#6E7E99">1</text>
     <text class="mono mes" x="158.08333333333334" y="430" text-anchor="middle" fill="#6E7E99">set</text>
     <rect x="212.16666666666666" y="401" width="56.2" height="3" rx="3" fill="#243350"/>
     <rect class="brilho" style="animation-delay:0.16s" x="212.16666666666666" y="401" width="56.2" height="3" rx="3" fill="url(#pulso)"/>
@@ -89,36 +89,36 @@
     <rect class="brilho" style="animation-delay:0.48s" x="376.5" y="401" width="56.2" height="3" rx="3" fill="url(#pulso)"/>
 
     <text class="mono mes" x="404.5833333333333" y="430" text-anchor="middle" fill="#6E7E99">dez</text>
-    <rect x="458.66666666666663" y="387" width="56.2" height="17" rx="3" fill="url(#barra)"/>
-    <rect class="brilho" style="animation-delay:0.64s" x="458.66666666666663" y="387" width="56.2" height="17" rx="3" fill="url(#pulso)"/>
-<text class="mono valor" x="486.74999999999994" y="376" text-anchor="middle" fill="#6E7E99">1</text>
+    <rect x="458.66666666666663" y="369" width="56.2" height="35" rx="3" fill="url(#barra)"/>
+    <rect class="brilho" style="animation-delay:0.64s" x="458.66666666666663" y="369" width="56.2" height="35" rx="3" fill="url(#pulso)"/>
+<text class="mono valor" x="486.74999999999994" y="358" text-anchor="middle" fill="#6E7E99">1</text>
     <text class="mono mes" x="486.74999999999994" y="430" text-anchor="middle" fill="#6E7E99">jan</text>
-    <rect x="540.8333333333333" y="369" width="56.2" height="35" rx="3" fill="url(#barra)"/>
-    <rect class="brilho" style="animation-delay:0.80s" x="540.8333333333333" y="369" width="56.2" height="35" rx="3" fill="url(#pulso)"/>
-<text class="mono valor" x="568.9166666666666" y="358" text-anchor="middle" fill="#6E7E99">2</text>
+    <rect x="540.8333333333333" y="401" width="56.2" height="3" rx="3" fill="#243350"/>
+    <rect class="brilho" style="animation-delay:0.80s" x="540.8333333333333" y="401" width="56.2" height="3" rx="3" fill="url(#pulso)"/>
+
     <text class="mono mes" x="568.9166666666666" y="430" text-anchor="middle" fill="#6E7E99">fev</text>
-    <rect x="623" y="335" width="56.2" height="69" rx="3" fill="url(#barra)"/>
-    <rect class="brilho" style="animation-delay:0.96s" x="623" y="335" width="56.2" height="69" rx="3" fill="url(#pulso)"/>
-<text class="mono valor" x="651.0833333333334" y="324" text-anchor="middle" fill="#6E7E99">4</text>
+    <rect x="623" y="401" width="56.2" height="3" rx="3" fill="#243350"/>
+    <rect class="brilho" style="animation-delay:0.96s" x="623" y="401" width="56.2" height="3" rx="3" fill="url(#pulso)"/>
+
     <text class="mono mes" x="651.0833333333334" y="430" text-anchor="middle" fill="#6E7E99">mar</text>
-    <rect x="705.1666666666666" y="387" width="56.2" height="17" rx="3" fill="url(#barra)"/>
-    <rect class="brilho" style="animation-delay:1.12s" x="705.1666666666666" y="387" width="56.2" height="17" rx="3" fill="url(#pulso)"/>
-<text class="mono valor" x="733.25" y="376" text-anchor="middle" fill="#6E7E99">1</text>
+    <rect x="705.1666666666666" y="401" width="56.2" height="3" rx="3" fill="#243350"/>
+    <rect class="brilho" style="animation-delay:1.12s" x="705.1666666666666" y="401" width="56.2" height="3" rx="3" fill="url(#pulso)"/>
+
     <text class="mono mes" x="733.25" y="430" text-anchor="middle" fill="#6E7E99">abr</text>
-    <rect x="787.3333333333333" y="317" width="56.2" height="87" rx="3" fill="url(#barra)"/>
-    <rect class="brilho" style="animation-delay:1.28s" x="787.3333333333333" y="317" width="56.2" height="87" rx="3" fill="url(#pulso)"/>
-<text class="mono valor" x="815.4166666666666" y="306" text-anchor="middle" fill="#6E7E99">5</text>
+    <rect x="787.3333333333333" y="300" width="56.2" height="104" rx="3" fill="url(#barra)"/>
+    <rect class="brilho" style="animation-delay:1.28s" x="787.3333333333333" y="300" width="56.2" height="104" rx="3" fill="url(#pulso)"/>
+<text class="mono valor" x="815.4166666666666" y="289" text-anchor="middle" fill="#6E7E99">3</text>
     <text class="mono mes" x="815.4166666666666" y="430" text-anchor="middle" fill="#6E7E99">mai</text>
-    <rect x="869.4999999999999" y="317" width="56.2" height="87" rx="3" fill="url(#barra)"/>
-    <rect class="brilho" style="animation-delay:1.44s" x="869.4999999999999" y="317" width="56.2" height="87" rx="3" fill="url(#pulso)"/>
-<text class="mono valor" x="897.5833333333333" y="306" text-anchor="middle" fill="#6E7E99">5</text>
+    <rect x="869.4999999999999" y="369" width="56.2" height="35" rx="3" fill="url(#barra)"/>
+    <rect class="brilho" style="animation-delay:1.44s" x="869.4999999999999" y="369" width="56.2" height="35" rx="3" fill="url(#pulso)"/>
+<text class="mono valor" x="897.5833333333333" y="358" text-anchor="middle" fill="#6E7E99">1</text>
     <text class="mono mes" x="897.5833333333333" y="430" text-anchor="middle" fill="#6E7E99">jun</text>
-    <rect x="951.6666666666665" y="352" width="56.2" height="52" rx="3" fill="url(#barra)"/>
-    <rect class="brilho" style="animation-delay:1.60s" x="951.6666666666665" y="352" width="56.2" height="52" rx="3" fill="url(#pulso)"/>
-<text class="mono valor" x="979.7499999999999" y="341" text-anchor="middle" fill="#6E7E99">3</text>
+    <rect x="951.6666666666665" y="401" width="56.2" height="3" rx="3" fill="#243350"/>
+    <rect class="brilho" style="animation-delay:1.60s" x="951.6666666666665" y="401" width="56.2" height="3" rx="3" fill="url(#pulso)"/>
+
     <text class="mono mes" x="979.7499999999999" y="430" text-anchor="middle" fill="#6E7E99">jul</text>
-    <rect x="1033.8333333333333" y="352" width="56.2" height="52" rx="3" fill="url(#barraAtual)"/>
-    <rect class="brilho" style="animation-delay:1.76s" x="1033.8333333333333" y="352" width="56.2" height="52" rx="3" fill="url(#pulso)"/>
-<text class="mono valor" x="1061.9166666666665" y="341" text-anchor="middle" fill="#FFB020">3</text>
+    <rect x="1033.8333333333333" y="401" width="56.2" height="3" rx="3" fill="#243350"/>
+    <rect class="brilho" style="animation-delay:1.76s" x="1033.8333333333333" y="401" width="56.2" height="3" rx="3" fill="url(#pulso)"/>
+
     <text class="mono mes" x="1061.9166666666665" y="430" text-anchor="middle" fill="#E8EDF7">ago</text>
 </svg>
