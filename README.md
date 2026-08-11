@@ -2,7 +2,7 @@
 
 ## Eu construo sistemas que vendem sozinhos
 
-Sou **Luciano Junior Bifano Braga**. Meu trabalho é transformar processo comercial em máquina: o lead entra, o sistema qualifica, nutre, agenda e devolve para o time humano só o que vale a conversa.
+Sou **Junior Braga**. Meu trabalho é transformar processo comercial em máquina: o lead entra, o sistema qualifica, nutre, agenda e devolve para o time humano só o que vale a conversa.
 
 Faço isso na **AVA Partners**, onde lidero automação e IA aplicada a vendas — e onde também formo os times que vão operar essas máquinas depois que elas entram no ar. Em paralelo, curso Ciência da Computação, o que me dá a base para descer ao código quando o no-code trava.
 
