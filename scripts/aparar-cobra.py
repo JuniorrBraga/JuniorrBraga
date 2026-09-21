@@ -14,7 +14,10 @@ que aparou.
 import re
 import sys
 
-MARGEM = 4  # unidades mantidas acima da primeira fileira
+# Zero de propósito: os quadros-chave mostram a cobra estacionada em
+# translate(0, -16px), e uma célula tem 16 unidades. Qualquer margem
+# positiva deixa um filete dela aparecendo acima da grade.
+MARGEM = 0
 
 
 def aparar(caminho):
