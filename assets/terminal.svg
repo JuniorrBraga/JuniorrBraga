@@ -1,12 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 336" width="1000" height="336"
      role="img" aria-labelledby="tt dd">
   <title id="tt">Terminal de Junior Braga</title>
-  <desc id="dd">Um terminal digita sozinho: quem sou, o que eu faço, e o convite para jogar jogo da velha mais abaixo nesta página.</desc>
+  <desc id="dd">Um terminal digita sozinho: quem sou, o que eu faço, e o convite para ver o resto da página.</desc>
 
   <style>
     .t { font: 400 17px ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
     .barra { font: 400 12.5px ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
-    /* sem animação para quem pediu menos movimento: o texto fica todo visível */
     @media (prefers-reduced-motion: reduce) {
       .cursor { display: none; }
       .t { clip-path: none !important; }
@@ -16,27 +15,27 @@
   <defs>
     <clipPath id="c0"><rect x="0" y="60" width="0" height="34">
       <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;90;90" keyTimes="0;0.0296;0.0963;1"/>
+               values="0;0;156;156" keyTimes="0;0.0296;0.0963;1"/>
     </rect></clipPath>
     <clipPath id="c1"><rect x="0" y="100" width="0" height="34">
       <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;379;379" keyTimes="0;0.1185;0.2074;1"/>
+               values="0;0;530;530" keyTimes="0;0.1185;0.2222;1"/>
     </rect></clipPath>
     <clipPath id="c2"><rect x="0" y="140" width="0" height="34">
       <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;163;163" keyTimes="0;0.2370;0.3185;1"/>
+               values="0;0;233;233" keyTimes="0;0.2519;0.3333;1"/>
     </rect></clipPath>
     <clipPath id="c3"><rect x="0" y="180" width="0" height="34">
       <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;586;586" keyTimes="0;0.3481;0.4889;1"/>
+               values="0;0;684;684" keyTimes="0;0.3630;0.5037;1"/>
     </rect></clipPath>
     <clipPath id="c4"><rect x="0" y="220" width="0" height="34">
       <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;152;152" keyTimes="0;0.5185;0.5926;1"/>
+               values="0;0;222;222" keyTimes="0;0.5333;0.6074;1"/>
     </rect></clipPath>
     <clipPath id="c5"><rect x="0" y="260" width="0" height="34">
       <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;596;596" keyTimes="0;0.6222;0.7852;1"/>
+               values="0;0;695;695" keyTimes="0;0.6370;0.8000;1"/>
     </rect></clipPath>
   </defs>
 
@@ -45,19 +44,19 @@
   <line x1="0" y1="40" x2="1000" y2="40" stroke="#1E2C3E" stroke-width="1.5"/>
   <text class="barra" x="20" y="26" fill="#4E647E">~/junior</text>
 
-  <text class="t" x="44" y="86" fill="#E8EEF6" clip-path="url(#c0)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">​</tspan>whoami</text>
-  <text class="t" x="44" y="126" fill="#8FA6BD" clip-path="url(#c1)">junior braga · ciência da computação</text>
-  <text class="t" x="44" y="166" fill="#E8EEF6" clip-path="url(#c2)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">​</tspan>cat sobre.txt</text>
+  <text class="t" x="44" y="86" fill="#E8EEF6" clip-path="url(#c0)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">whoami</tspan></text>
+  <text class="t" x="44" y="126" fill="#8FA6BD" clip-path="url(#c1)">junior braga · especialista em GoHighLevel</text>
+  <text class="t" x="44" y="166" fill="#E8EEF6" clip-path="url(#c2)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">cat sobre.txt</tspan></text>
   <text class="t" x="44" y="206" fill="#8FA6BD" clip-path="url(#c3)">bots, automação e coisas que rodam sozinhas de madrugada</text>
-  <text class="t" x="44" y="246" fill="#E8EEF6" clip-path="url(#c4)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">​</tspan>ls diversao/</text>
-  <text class="t" x="44" y="286" fill="#3DD68C" clip-path="url(#c5)">cobra.svg  madrugada.svg  →  tá tudo mexendo aqui embaixo</text>
+  <text class="t" x="44" y="246" fill="#E8EEF6" clip-path="url(#c4)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">ls diversao/</tspan></text>
+  <text class="t" x="44" y="286" fill="#3DD68C" clip-path="url(#c5)">cobra.gif  madrugada.svg  →  tá tudo mexendo aqui embaixo</text>
 
   <rect class="cursor" x="44" y="271" width="10" height="20" fill="#3DD68C" opacity="0">
     <animate attributeName="opacity" dur="13.5s" repeatCount="indefinite"
-             values="0;0;1;1" keyTimes="0;0.6222;0.6259;1"/>
+             values="0;0;1;1" keyTimes="0;0.6370;0.6407;1"/>
     <animate attributeName="x" dur="13.5s" repeatCount="indefinite"
-             values="44;44;634;634"
-             keyTimes="0;0.6222;0.7852;1"/>
+             values="44;44;671;671"
+             keyTimes="0;0.6370;0.8000;1"/>
     <animate attributeName="fill-opacity" values="1;1;0;1" dur="1.05s" repeatCount="indefinite"/>
   </rect>
 </svg>
