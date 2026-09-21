@@ -1,7 +1,7 @@
 {
   "tabuleiro": [
-    ".",
-    ".",
+    "X",
+    "O",
     ".",
     ".",
     ".",
@@ -14,10 +14,10 @@
   "linhaVencedora": null,
   "ultimo": {
     "usuario": "JuniorrBraga",
-    "posicao": 4,
-    "quando": "2026-09-21T14:59:45.360Z"
+    "posicao": 0,
+    "quando": "2026-09-21T15:06:53.615Z"
   },
-  "respostaDaCasa": null,
+  "respostaDaCasa": 1,
   "placar": {
     "mundo": 0,
     "casa": 0,
