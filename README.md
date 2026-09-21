@@ -20,7 +20,7 @@
 
 <br><br>
 
-<img src="https://skillicons.dev/icons?i=ts,js,nodejs,react,nextjs,python,postgres,supabase,docker,git,linux,vercel&perline=12&theme=dark" alt="tecnologias que eu uso">
+<img src="./assets/stack.svg" alt="tecnologias que eu uso" width="100%">
 
 <br><br>
 
