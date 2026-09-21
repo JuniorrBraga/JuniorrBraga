@@ -44,4 +44,6 @@ jobs:
             exit 0
           fi
           git commit -m "cobra: gráfico de $(date -u +%d/%m/%Y)"
+          # execuções simultâneas já se atropelaram aqui
+          git pull --rebase --quiet
           git push
