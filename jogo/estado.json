@@ -1,0 +1,27 @@
+{
+  "tabuleiro": [
+    "O",
+    ".",
+    ".",
+    ".",
+    "X",
+    ".",
+    ".",
+    ".",
+    "."
+  ],
+  "resultado": null,
+  "linhaVencedora": null,
+  "ultimo": {
+    "usuario": "JuniorrBraga",
+    "posicao": 4,
+    "quando": "2026-09-21T14:59:45.360Z"
+  },
+  "respostaDaCasa": 0,
+  "placar": {
+    "mundo": 0,
+    "casa": 0,
+    "empates": 0
+  },
+  "partidas": 0
+}
