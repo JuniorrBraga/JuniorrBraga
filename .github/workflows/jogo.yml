@@ -1,0 +1,73 @@
+name: Jogo da velha
+
+# Qualquer pessoa joga abrindo uma issue pelo link do tabuleiro.
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: jogo
+  cancel-in-progress: false
+
+jobs:
+  jogar:
+    # só reage às issues do jogo, ignora o resto
+    if: startsWith(github.event.issue.title, 'jogada') || github.event.issue.title == 'nova partida'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Aplicar a jogada
+        id: jogada
+        # O título vem de quem abriu a issue. Ele entra por variável de
+        # ambiente, nunca interpolado no shell: interpolar aqui deixaria
+        # qualquer visitante executar comando nesta Action.
+        env:
+          TITULO: ${{ github.event.issue.title }}
+          USUARIO: ${{ github.event.issue.user.login }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set +e
+          SAIDA=$(node scripts/jogar.mjs 2>&1)
+          CODIGO=$?
+          set -e
+          {
+            echo "recado<<FIM"
+            echo "$SAIDA"
+            echo "FIM"
+            echo "codigo=$CODIGO"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Publicar o tabuleiro
+        if: steps.jogada.outputs.codigo == '0'
+        run: |
+          if git diff --quiet; then
+            echo "Nada mudou."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md README.en.md jogo/estado.json
+          git commit -m "jogo: ${TITULO} por @${USUARIO}"
+          git push
+        env:
+          TITULO: ${{ github.event.issue.title }}
+          USUARIO: ${{ github.event.issue.user.login }}
+
+      - name: Responder e fechar a issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUMERO: ${{ github.event.issue.number }}
+          RECADO: ${{ steps.jogada.outputs.recado }}
+        run: |
+          gh issue comment "$NUMERO" --body "$RECADO
+
+          O tabuleiro leva alguns segundos para atualizar no perfil."
+          gh issue close "$NUMERO"
