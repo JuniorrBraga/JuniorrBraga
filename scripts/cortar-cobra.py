@@ -9,6 +9,7 @@ faz ela simplesmente surgir pela borda, que é o que se espera.
 O corte é medido, não chutado: o script acha onde a primeira fileira de
 quadradinhos começa e corta logo acima dela.
 """
+import os
 import sys
 from PIL import Image, ImageSequence
 
@@ -39,8 +40,15 @@ def cortar(caminho):
     im.seek(0)
     quadros = [q.convert("RGB").crop((0, topo, im.width, im.height))
                for q in ImageSequence.Iterator(im)]
-    quadros[0].save(caminho, save_all=True, append_images=quadros[1:], loop=0,
+
+    # Escreve num temporário e substitui. A ação que gera o GIF roda em
+    # contêiner e deixa o arquivo sem permissão de escrita para o runner;
+    # gravar por cima falha, mas trocar o arquivo na pasta funciona.
+    temporario = caminho + ".tmp.gif"
+    quadros[0].save(temporario, save_all=True, append_images=quadros[1:], loop=0,
                     duration=im.info.get("duration", 100), optimize=True)
+    im.close()
+    os.replace(temporario, caminho)
     print(f"{caminho}: cortados {topo}px do topo, {len(quadros)} quadros")
 
 
