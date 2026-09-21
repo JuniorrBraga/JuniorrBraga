@@ -1,10 +1,12 @@
 name: Cobra do gráfico de contribuições
 
-# Configuração padrão da ação, igual ao passo a passo de referência:
+# Configuração padrão da ação (paleta e velocidade originais), igual ao
+# passo a passo de referência:
 # https://github.com/GabrielaZanetti/animacaoCobrinha
 #
-# Já tentei customizar paleta, converter para GIF, recortar e acelerar — e
-# cada ajuste criou um problema novo. O padrão é o que funciona.
+# A única intervenção é aparar a moldura: nem esta ação nem o fork
+# Sutil/snk oferecem opção para a cobra não desfilar fora da grade, então
+# encolhemos a área visível depois de gerada.
 on:
   schedule:
     - cron: "0 5 * * *"
@@ -33,6 +35,9 @@ jobs:
           outputs: |
             assets/cobra.svg
             assets/cobra-escura.svg?palette=github-dark
+
+      - name: Aparar a moldura onde a cobra fica fora da grade
+        run: python3 scripts/aparar-cobra.py assets/cobra.svg assets/cobra-escura.svg
 
       - name: Publicar se mudou
         run: |
