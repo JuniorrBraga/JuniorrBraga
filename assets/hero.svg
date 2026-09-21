@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320"
+     role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Junior Braga — automação e agentes de IA sobre GoHighLevel</title>
+  <desc id="descricao">Um evento de lead percorre o pipeline: entra por webhook, é qualificado por um agente de IA, agendado pela API do GoHighLevel e entregue ao vendedor.</desc>
+
+  <defs>
+    <!-- userSpaceOnUse: a caixa de uma linha horizontal tem altura zero,
+         e um gradiente em objectBoundingBox simplesmente não aparece -->
+    <linearGradient id="trilho" gradientUnits="userSpaceOnUse" x1="120" y1="0" x2="1080" y2="0">
+      <stop offset="0%"   stop-color="#F2A33C"/>
+      <stop offset="48%"  stop-color="#6D9BFF"/>
+      <stop offset="100%" stop-color="#3DD68C"/>
+    </linearGradient>
+    <linearGradient id="rastro" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.85"/>
+    </linearGradient>
+    <path id="rota" d="M120 222 H1080" fill="none"/>
+    <filter id="brilho" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .nome  { font: 700 50px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: -1.6px; }
+    .papel { font: 400 18px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .frase { font: 600 18px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .etapa { font: 600 15px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .tec   { font: 400 12.5px ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+
+    /* Quem pediu menos movimento não recebe movimento. */
+    @media (prefers-reduced-motion: reduce) { .anim { display: none; } }
+  </style>
+
+  <rect width="1200" height="320" rx="18" fill="#0E1622"/>
+  <rect x="0.75" y="0.75" width="1198.5" height="318.5" rx="17.25" fill="none" stroke="#223145" stroke-width="1.5"/>
+
+  <text class="nome"  x="64" y="86"  fill="#E8EEF6">Junior Braga</text>
+  <text class="papel" x="64" y="119" fill="#8298AF">Automação e agentes de IA sobre GoHighLevel, com o código que a plataforma não entrega.</text>
+  <text class="frase" x="64" y="151" fill="#F2A33C">Quando o builder trava, eu desço para o código.</text>
+
+  <!-- o trilho domina a metade de baixo: é o assunto, não enfeite -->
+  <line x1="120" y1="222" x2="1080" y2="222" stroke="#182536" stroke-width="6" stroke-linecap="round"/>
+  <line x1="120" y1="222" x2="1080" y2="222" stroke="url(#trilho)" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+
+  <g class="anim">
+    <!-- o rastro corre junto com o pacote, sugerindo direção -->
+    <rect x="-86" y="219" width="86" height="6" rx="3" fill="url(#rastro)" opacity="0.5">
+      <animateMotion dur="5.5s" repeatCount="indefinite" calcMode="linear">
+        <mpath href="#rota"/>
+      </animateMotion>
+    </rect>
+    <circle r="9" fill="#F2A33C" filter="url(#brilho)">
+      <animateMotion dur="5.5s" repeatCount="indefinite" calcMode="linear">
+        <mpath href="#rota"/>
+      </animateMotion>
+      <animate attributeName="fill" dur="5.5s" repeatCount="indefinite"
+               values="#F2A33C;#F2A33C;#5B8DEF;#3DD68C;#3DD68C"
+               keyTimes="0;0.2;0.55;0.86;1"/>
+    </circle>
+  </g>
+
+  <g fill="#0E1622" stroke="#41586F" stroke-width="3">
+    <circle cx="120"  cy="222" r="10"/>
+    <circle cx="440"  cy="222" r="10"/>
+    <circle cx="760"  cy="222" r="10"/>
+    <circle cx="1080" cy="222" r="10"/>
+  </g>
+
+  <g class="etapa" fill="#E8EEF6">
+    <text x="120"  y="200">Lead entra</text>
+    <text x="440"  y="200" text-anchor="middle">Qualifica</text>
+    <text x="760"  y="200" text-anchor="middle">Agenda</text>
+    <text x="1080" y="200" text-anchor="end">Vendedor recebe</text>
+  </g>
+
+  <g class="tec" fill="#6F8299">
+    <text x="120"  y="254">webhook</text>
+    <text x="440"  y="254" text-anchor="middle">agente de IA</text>
+    <text x="760"  y="254" text-anchor="middle">API v2 do GHL</text>
+    <text x="1080" y="254" text-anchor="end">handoff humano</text>
+  </g>
+</svg>

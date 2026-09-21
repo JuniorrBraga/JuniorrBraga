@@ -37,21 +37,20 @@ jobs:
           PAT: ${{ secrets.PAINEL_TOKEN }}
         run: |
           if [ -z "$PAT" ]; then
-            echo "::warning::Secret PAINEL_TOKEN ausente. O painel fica como está."
-            echo "tem=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "tem=true" >> "$GITHUB_OUTPUT"
+            echo "::error::Secret PAINEL_TOKEN ausente — o painel congela e passa a"
+            echo "::error::mostrar números velhos como se fossem de hoje."
+            echo "::error::Crie um PAT (escopos repo + read:user) e salve como PAINEL_TOKEN."
+            exit 1
           fi
+          echo "tem=true" >> "$GITHUB_OUTPUT"
 
       - name: Gerar assets/painel.svg
-        if: steps.token.outputs.tem == 'true'
         env:
           GH_TOKEN: ${{ secrets.PAINEL_TOKEN }}
           GH_USUARIO: ${{ github.repository_owner }}
         run: node scripts/build-painel.mjs
 
       - name: Publicar se mudou
-        if: steps.token.outputs.tem == 'true'
         run: |
           if git diff --quiet -- assets/painel.svg; then
             echo "Nenhuma mudança nos números de hoje."

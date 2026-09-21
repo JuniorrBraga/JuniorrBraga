@@ -1,62 +1,78 @@
-<img src="./assets/header.svg" alt="Junior Braga — Arquiteto de máquinas de venda" width="100%">
+<img src="./assets/hero.svg" alt="Junior Braga — automação e agentes de IA sobre GoHighLevel" width="100%">
 
-## Eu construo sistemas que vendem sozinhos
+Construo automação comercial e agentes de IA sobre **GoHighLevel**, e escrevo o código onde a plataforma acaba. Trabalho na **AVA Partners**, curso Ciência da Computação e passo o dia no limite entre um builder visual e um editor de texto.
 
-Sou **Junior Braga**. Meu trabalho é transformar processo comercial em máquina: o lead entra, o sistema qualifica, nutre, agenda e devolve para o time humano só o que vale a conversa.
+Este perfil é para quem constrói. Se você nunca tocou em GoHighLevel — provavelmente o seu caso — a seção abaixo é o resumo honesto do que esse trabalho é de verdade.
 
-Faço isso na **AVA Partners**, onde lidero automação e IA aplicada a vendas — e onde também formo os times que vão operar essas máquinas depois que elas entram no ar. Em paralelo, curso Ciência da Computação, o que me dá a base para descer ao código quando o no-code trava.
-
-Não entrego fluxograma bonito. Entrego coisa rodando em produção.
+[English version](./README.en.md)
 
 ---
 
-## O que eu resolvo
+## O que é trabalhar com GoHighLevel
 
-**Lead que esfria na fila.** Agentes de IA que qualificam por conversa real, pontuam intenção e empurram para o vendedor no momento certo. Não é chatbot de árvore de decisão — é prompt engineering aplicado a funil.
+GoHighLevel é um CRM white-label multi-tenant. Uma agência tem uma conta; cada cliente vira uma *subconta*. Dentro dela existem pipelines, calendários, formulários, disparo de mensagem e um construtor visual de workflows do tipo gatilho → condição → ação. É vendido como "não precisa de programador", e para boa parte do caminho isso é verdade.
 
-**CRM que ninguém usa.** Implantação de GoHighLevel white-label ponta a ponta: estrutura, integração, migração e treinamento. O sistema só serve se o time adotar, então a adoção faz parte da entrega.
+O trabalho interessante começa onde essa promessa termina.
 
-**Trabalho repetitivo que come a margem.** Esteiras que produzem em escala — edição de vídeo, geração de criativos, funis multi-nicho, relatórios. O que era hora de gente vira processo que roda de madrugada.
+<img src="./assets/ghl.svg" alt="Dois territórios: o que o builder resolve e onde entra código, separados pela costura" width="100%">
 
----
+**O builder não tem laço, agregação nem estado.** Ele reage a um evento por vez. No instante em que o problema vira "para cada contato que fez X nos últimos 30 dias, calcule Y e decida Z", não existe caminho dentro da ferramenta. Sai da plataforma, resolve fora, devolve o resultado.
 
-## Máquinas em produção
+**Webhook não é entrega garantida.** Chega fora de ordem, chega duas vezes, às vezes não chega. Qualquer coisa que dispare cobrança, mensagem ou agendamento precisa ser idempotente — chave de deduplicação, fila com retentativa e backoff. Sem isso, o sintoma aparece do pior jeito possível: a mesma mensagem chegando duas vezes para a mesma pessoa.
 
-| Projeto | O que faz | Stack |
-|---|---|---|
-| **Mestre da Lábia** | Agente de IA de qualificação e conversão de leads por conversa. Validado com lucro real. | TypeScript · LLM |
-| **[MatchGoal](https://github.com/JuniorrBraga/matchgoal)** | SaaS de análise estatística de futebol com IA para a Copa 2026. | Turborepo · pnpm · TS |
-| **Low Ticket Machine** | Esteira de produtos digitais com funil gamificado multi-nicho. | Next.js · Supabase |
-| **Afiliado Machine** | Esteira semi-automática de vídeos de afiliado: da captura ao post aprovado. | Python · FFmpeg · Whisper |
-| **AvaZap CRM+** | Integração de WhatsApp e pipeline comercial sobre GoHighLevel. | TypeScript · API GHL |
-| **Motor de Edição** | Automação de edição e legendagem de vídeo em lote para a operação. | Python · FFmpeg |
+**A API v2 é OAuth 2.0 com token por subconta.** Escopo por recurso, limite de requisição por subconta, e o token do cliente é responsabilidade sua guardar e renovar. Uma automação que atende 30 clientes gerencia 30 conjuntos de credenciais.
 
-> A maior parte dos repositórios é privada por serem sistemas de clientes em operação. Posso mostrar arquitetura e demo em conversa.
+**Snapshot replica estrutura, não dados.** Ele copia o desenho de uma conta para outra. Migrar contatos, histórico e conversas continua sendo trabalho de extração, transformação e carga — feito com cuidado, porque do outro lado tem uma operação comercial rodando.
+
+**White-label significa que o produto é seu.** Domínio próprio, marca própria, e quando precisa injetar algo que o painel não deixa, um proxy na frente.
+
+A entrega, no fim, é uma decisão de arquitetura repetida muitas vezes: **o que fica no builder e o que vira código.** Errar para o lado do código cria um sistema que só eu mantenho. Errar para o lado do builder cria um workflow de quarenta caixas que ninguém entende em seis meses. O que o time consegue manter sozinho depois que eu saio faz parte do que é entregue.
 
 ---
 
-## Painel de produção
+## Como eu trabalho
 
-<img src="./assets/painel.svg" alt="Painel de produção com números do GitHub atualizados diariamente" width="100%">
+**Automação que ninguém revisa é automação que mente.** Todo fluxo que roda sozinho tem log, contagem e um jeito de responder "isso rodou hoje?". Job verde que não fez nada é o pior resultado possível — passa despercebido por semanas.
 
-<sub>Gerado automaticamente todo dia pela [Action deste repositório](.github/workflows/painel.yml), direto da API do GitHub. Sem número inflado.</sub>
+**Prefiro um sistema que o cliente entenda a um que me impressione.** A parte difícil quase nunca é técnica: é decidir o que não construir.
+
+**IA é componente, não enfeite.** Um agente de qualificação precisa de contexto, limite e uma saída que o resto do sistema consiga consumir. Prompt solto sem validação de saída é bug esperando acontecer.
+
+**Escrevo em português.** Código, commit e documentação. É o idioma de quem mantém esses sistemas comigo.
 
 ---
 
 ## Ferramentas
 
-| Domínio | Stack |
+| | |
 |---|---|
-| **IA aplicada** | Claude · GPT · Gemini · Prompt Engineering · Whisper |
-| **Automação & CRM** | GoHighLevel · n8n · integrações de API · webhooks |
-| **Produto** | TypeScript · Next.js · React · Supabase · Postgres |
-| **Backend & dados** | Python · Django · FFmpeg · SQL |
-| **Base** | Git · GitHub Actions · Ciência da Computação (Univertix) |
+| **Plataforma** | GoHighLevel — API v2, webhooks, snapshots, white-label, multi-subconta |
+| **Código** | TypeScript · Node · Next.js · React · Python |
+| **Dados** | Postgres · Supabase · SQL |
+| **IA** | Claude · GPT · Whisper · engenharia de prompt aplicada a funil |
+| **Mídia** | FFmpeg — esteiras de edição e legendagem em lote |
+| **Operação** | GitHub Actions · Vercel · n8n · Docker |
 
 ---
 
-## Vamos conversar
+## Painel de produção
 
-Se você tem um processo comercial que depende de gente fazendo a mesma coisa todo dia, provavelmente dá para automatizar boa parte dele.
+<img src="./assets/painel.svg" alt="Números do GitHub atualizados diariamente pela Action deste repositório" width="100%">
+
+<sub>Gerado todo dia pela [Action deste repositório](.github/workflows/painel.yml), direto da API do GitHub. Se o token de leitura faltar, o job falha em vez de publicar número velho como se fosse de hoje.</sub>
+
+---
+
+## Sobre os repositórios
+
+A maior parte é privada — são sistemas de clientes em operação. O que está público serve para mostrar como eu construo, não o que eu vendo. Arquitetura e demonstração eu mostro em conversa.
+
+**[matchgoal](https://github.com/JuniorrBraga/matchgoal)** — SaaS de análise estatística de futebol com IA. Monorepo pnpm + Turborepo.
+
+---
+
+## Contato
+
+Se você tem um processo comercial preso num builder que não vai mais longe, ou uma integração que a plataforma não oferece, me chama.
 
 **[LinkedIn](https://www.linkedin.com/in/junior-braga/)** · **[bragajuniordev@gmail.com](mailto:bragajuniordev@gmail.com)**
