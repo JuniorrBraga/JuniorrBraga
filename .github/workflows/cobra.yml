@@ -27,8 +27,11 @@ jobs:
         id: cobra
         with:
           github_user_name: ${{ github.repository_owner }}
+          # duas versões: quem usa o GitHub no tema claro veria um bloco
+          # escuro se existisse só a de cima
           outputs: |
             assets/cobra.svg?palette=github-dark&color_snake=#F2A33C&color_dots=#16212F,#2C3E55,#4C6C93,#9DB0C5,#F2A33C
+            assets/cobra-claro.svg?palette=github-light&color_snake=#D98324&color_dots=#EBEDF0,#D8DEE6,#A7B6C8,#6E8299,#D98324
 
       - name: Publicar se mudou
         run: |
@@ -36,7 +39,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # git add ANTES de comparar: "git diff" não enxerga arquivo novo,
           # e o gráfico ficava escrito no disco sem nunca ser publicado.
-          git add assets/cobra.svg
+          git add assets/cobra.svg assets/cobra-claro.svg
           if git diff --cached --quiet; then
             echo "Nenhuma mudança no gráfico."
             exit 0

@@ -30,7 +30,10 @@
 
 <br>
 
-<img src="./assets/cobra.svg" alt="uma cobra comendo meu gráfico de contribuições" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/cobra.svg">
+  <img src="./assets/cobra-claro.svg" alt="uma cobra comendo meu gráfico de contribuições" width="100%">
+</picture>
 
 <br><br>
 
