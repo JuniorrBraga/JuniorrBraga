@@ -32,9 +32,13 @@ jobs:
           # GIF além do SVG: o GIF dá para abrir quadro a quadro e conferir
           # de verdade como a cobra se comporta, o SVG animado não.
           outputs: |
-            assets/cobra.svg?palette=github-dark&color_snake=#F2A33C&color_dots=#161B22,#1F3A5F,#2E5C8A,#4C87C4,#7FB3E8
-            assets/cobra-claro.svg?palette=github-light&color_snake=#D98324&color_dots=#EBEDF0,#C6DBF5,#8FBCE8,#5590CE,#2C6BAE
             assets/cobra.gif?palette=github-dark&color_snake=#F2A33C&color_dots=#161B22,#1F3A5F,#2E5C8A,#4C87C4,#7FB3E8
+            assets/cobra-clara.gif?palette=github-light&color_snake=#D98324&color_dots=#EBEDF0,#C6DBF5,#8FBCE8,#5590CE,#2C6BAE
+
+      - name: Cortar a faixa onde a cobra fica fora da grade
+        run: |
+          python3 -m pip install --quiet --upgrade pillow
+          python3 scripts/cortar-cobra.py assets/cobra.gif assets/cobra-clara.gif
 
       - name: Publicar se mudou
         run: |
@@ -42,7 +46,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # git add ANTES de comparar: "git diff" não enxerga arquivo novo,
           # e o gráfico ficava escrito no disco sem nunca ser publicado.
-          git add assets/cobra.svg assets/cobra-claro.svg assets/cobra.gif
+          git add assets/cobra.gif assets/cobra-clara.gif
           if git diff --cached --quiet; then
             echo "Nenhuma mudança no gráfico."
             exit 0

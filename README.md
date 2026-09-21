@@ -9,8 +9,8 @@
 <br><br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/cobra.svg">
-  <img src="./assets/cobra-claro.svg" alt="uma cobra comendo meu gráfico de contribuições" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/cobra.gif">
+  <img src="./assets/cobra-clara.gif" alt="uma cobra comendo meu gráfico de contribuições" width="100%">
 </picture>
 
 <br><br>
@@ -23,11 +23,15 @@
 
 <br><br>
 
+<img src="./assets/neymar.gif" width="190" alt="">
+
+<br>
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/junior-braga/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:bragajuniordev@gmail.com)
 
 <sub><a href="./README.en.md">in english</a></sub>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3A5F,100:F2A33C&height=130&section=footer&reversal=false" width="100%" alt="">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3A5F,100:F2A33C&height=130&section=footer" width="100%" alt="">
 
 </div>
