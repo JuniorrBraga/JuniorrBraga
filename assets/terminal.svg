@@ -49,13 +49,13 @@
   <text class="t" x="44" y="166" fill="#E8EEF6" clip-path="url(#c2)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">cat sobre.txt</tspan></text>
   <text class="t" x="44" y="206" fill="#8FA6BD" clip-path="url(#c3)">bots, automação e coisas que rodam sozinhas de madrugada</text>
   <text class="t" x="44" y="246" fill="#E8EEF6" clip-path="url(#c4)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">ls diversao/</tspan></text>
-  <text class="t" x="44" y="286" fill="#3DD68C" clip-path="url(#c5)">cobra.gif  madrugada.svg  →  tá tudo mexendo aqui embaixo</text>
+  <text class="t" x="44" y="286" fill="#3DD68C" clip-path="url(#c5)">cobra.svg  madrugada.svg  →  tá tudo mexendo aqui embaixo</text>
 
   <rect class="cursor" x="44" y="271" width="10" height="20" fill="#3DD68C" opacity="0">
     <animate attributeName="opacity" dur="13.5s" repeatCount="indefinite"
              values="0;0;1;1" keyTimes="0;0.6370;0.6407;1"/>
     <animate attributeName="x" dur="13.5s" repeatCount="indefinite"
-             values="44;44;671;671"
+             values="44;44;600;600"
              keyTimes="0;0.6370;0.8000;1"/>
     <animate attributeName="fill-opacity" values="1;1;0;1" dur="1.05s" repeatCount="indefinite"/>
   </rect>

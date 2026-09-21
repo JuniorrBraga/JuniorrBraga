@@ -9,8 +9,9 @@
 <br><br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/cobra.gif">
-  <img src="./assets/cobra-clara.gif" alt="uma cobra comendo meu gráfico de contribuições" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/cobra-escura.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/cobra.svg">
+  <img src="./assets/cobra.svg" alt="uma cobra comendo meu gráfico de contribuições" width="100%">
 </picture>
 
 <br><br>
