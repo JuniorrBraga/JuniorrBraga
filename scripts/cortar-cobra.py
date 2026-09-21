@@ -1,10 +1,13 @@
 """
-Corta a faixa de cima do GIF da cobra.
+Ajusta o GIF da cobra: corta a faixa de cima e acelera o laço.
 
 A ação que gera a animação estaciona a cobra numa faixa ACIMA da grade no
 início e no fim do laço — ela "entra em cena" vinda de fora. Visto de
 relance, parece que a cobra escapou dos quadradinhos. Recortar essa faixa
 faz ela simplesmente surgir pela borda, que é o que se espera.
+
+O laço original tem 339 quadros de 100ms — 34 segundos, tão devagar que
+parece travado. Metade dos quadros a 55ms deixa em torno de 9 segundos.
 
 O corte é medido, não chutado: o script acha onde a primeira fileira de
 quadradinhos começa e corta logo acima dela.
@@ -13,7 +16,9 @@ import os
 import sys
 from PIL import Image, ImageSequence
 
-TOLERANCIA = 4  # px de folga acima da primeira fileira
+TOLERANCIA = 0   # zero: qualquer folga deixa aparecer a cobra estacionada
+PULO = 2         # fica com 1 de cada 2 quadros
+DURACAO = 55     # ms por quadro — o padrão da ação dá um laço de 34s, lento demais
 
 
 def primeira_fileira(quadro):
@@ -39,17 +44,18 @@ def cortar(caminho):
 
     im.seek(0)
     quadros = [q.convert("RGB").crop((0, topo, im.width, im.height))
-               for q in ImageSequence.Iterator(im)]
+               for i, q in enumerate(ImageSequence.Iterator(im)) if i % PULO == 0]
 
     # Escreve num temporário e substitui. A ação que gera o GIF roda em
     # contêiner e deixa o arquivo sem permissão de escrita para o runner;
     # gravar por cima falha, mas trocar o arquivo na pasta funciona.
     temporario = caminho + ".tmp.gif"
     quadros[0].save(temporario, save_all=True, append_images=quadros[1:], loop=0,
-                    duration=im.info.get("duration", 100), optimize=True)
+                    duration=DURACAO, optimize=True)
     im.close()
     os.replace(temporario, caminho)
-    print(f"{caminho}: cortados {topo}px do topo, {len(quadros)} quadros")
+    print(f"{caminho}: cortados {topo}px, {len(quadros)} quadros, "
+          f"laço de {len(quadros) * DURACAO / 1000:.1f}s")
 
 
 if __name__ == "__main__":
