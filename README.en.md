@@ -28,6 +28,6 @@
 
 <sub><a href="./README.md">em português</a></sub>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0C131D,50:1E3A5F,100:F2A33C&height=120&section=footer&reversal=false" width="100%" alt="">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3A5F,100:F2A33C&height=130&section=footer&reversal=false" width="100%" alt="">
 
 </div>

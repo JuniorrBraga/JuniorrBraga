@@ -36,7 +36,7 @@
     </rect></clipPath>
     <clipPath id="c5"><rect x="0" y="260" width="0" height="34">
       <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;668;668" keyTimes="0;0.6222;0.7852;1"/>
+               values="0;0;596;596" keyTimes="0;0.6222;0.7852;1"/>
     </rect></clipPath>
   </defs>
 
@@ -50,13 +50,13 @@
   <text class="t" x="44" y="166" fill="#E8EEF6" clip-path="url(#c2)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">​</tspan>cat sobre.txt</text>
   <text class="t" x="44" y="206" fill="#8FA6BD" clip-path="url(#c3)">bots, automação e coisas que rodam sozinhas de madrugada</text>
   <text class="t" x="44" y="246" fill="#E8EEF6" clip-path="url(#c4)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">​</tspan>ls diversao/</text>
-  <text class="t" x="44" y="286" fill="#3DD68C" clip-path="url(#c5)">jogo-da-velha/  →  tem um jogável aqui embaixo. tenta me ganhar.</text>
+  <text class="t" x="44" y="286" fill="#3DD68C" clip-path="url(#c5)">cobra.svg  madrugada.svg  →  tá tudo mexendo aqui embaixo</text>
 
   <rect class="cursor" x="44" y="271" width="10" height="20" fill="#3DD68C" opacity="0">
     <animate attributeName="opacity" dur="13.5s" repeatCount="indefinite"
              values="0;0;1;1" keyTimes="0;0.6222;0.6259;1"/>
     <animate attributeName="x" dur="13.5s" repeatCount="indefinite"
-             values="44;44;706;706"
+             values="44;44;634;634"
              keyTimes="0;0.6222;0.7852;1"/>
     <animate attributeName="fill-opacity" values="1;1;0;1" dur="1.05s" repeatCount="indefinite"/>
   </rect>
