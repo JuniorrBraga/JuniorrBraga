@@ -24,14 +24,13 @@
 
 <br><br>
 
-<img src="./assets/neymar.gif" width="190" alt="">
+<img src="./assets/neymar-1.gif" width="150" alt="">
+<img src="./assets/neymar-2.gif" width="150" alt="">
+<img src="./assets/neymar-3.gif" width="150" alt="">
 
-<br>
+<br><br>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/junior-braga/)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:bragajuniordev@gmail.com)
-
-<sub><a href="./README.en.md">in english</a></sub>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3A5F,100:F2A33C&height=130&section=footer" width="100%" alt="">
 
