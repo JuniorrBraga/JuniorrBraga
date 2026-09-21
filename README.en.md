@@ -1,34 +1,12 @@
 <div align="center">
 
-<img src="./assets/terminal.svg" alt="terminal typing: who I am and what I do" width="100%">
+<img src="./assets/terminal.svg" alt="terminal typing who I am" width="100%">
 
 <br>
 
-### beat me at tic-tac-toe
+<img src="./assets/madrugada.svg" alt="late-night scene: code scrolling, coffee steaming, cat asleep" width="100%">
 
-<sub>click a square · it opens an issue · your move lands on its own</sub>
-
-</div>
-
-<!-- JOGO:INICIO -->
-<div align="center">
-  <table>
-    <tr><td><img src="./assets/jogo/x.svg" width="84" alt=""></td><td><img src="./assets/jogo/o.svg" width="84" alt=""></td><td><a href="https://github.com/JuniorrBraga/JuniorrBraga/issues/new?title=jogada%202&body=%C3%89%20s%C3%B3%20enviar.%20A%20jogada%20entra%20sozinha%20e%20a%20issue%20fecha%20em%20seguida."><img src="./assets/jogo/vazia.svg" width="84" alt=""></a></td></tr>
-    <tr><td><a href="https://github.com/JuniorrBraga/JuniorrBraga/issues/new?title=jogada%203&body=%C3%89%20s%C3%B3%20enviar.%20A%20jogada%20entra%20sozinha%20e%20a%20issue%20fecha%20em%20seguida."><img src="./assets/jogo/vazia.svg" width="84" alt=""></a></td><td><a href="https://github.com/JuniorrBraga/JuniorrBraga/issues/new?title=jogada%204&body=%C3%89%20s%C3%B3%20enviar.%20A%20jogada%20entra%20sozinha%20e%20a%20issue%20fecha%20em%20seguida."><img src="./assets/jogo/vazia.svg" width="84" alt=""></a></td><td><a href="https://github.com/JuniorrBraga/JuniorrBraga/issues/new?title=jogada%205&body=%C3%89%20s%C3%B3%20enviar.%20A%20jogada%20entra%20sozinha%20e%20a%20issue%20fecha%20em%20seguida."><img src="./assets/jogo/vazia.svg" width="84" alt=""></a></td></tr>
-    <tr><td><a href="https://github.com/JuniorrBraga/JuniorrBraga/issues/new?title=jogada%206&body=%C3%89%20s%C3%B3%20enviar.%20A%20jogada%20entra%20sozinha%20e%20a%20issue%20fecha%20em%20seguida."><img src="./assets/jogo/vazia.svg" width="84" alt=""></a></td><td><a href="https://github.com/JuniorrBraga/JuniorrBraga/issues/new?title=jogada%207&body=%C3%89%20s%C3%B3%20enviar.%20A%20jogada%20entra%20sozinha%20e%20a%20issue%20fecha%20em%20seguida."><img src="./assets/jogo/vazia.svg" width="84" alt=""></a></td><td><a href="https://github.com/JuniorrBraga/JuniorrBraga/issues/new?title=jogada%208&body=%C3%89%20s%C3%B3%20enviar.%20A%20jogada%20entra%20sozinha%20e%20a%20issue%20fecha%20em%20seguida."><img src="./assets/jogo/vazia.svg" width="84" alt=""></a></td></tr>
-  </table>
-
-  <b>Click an empty square. You are ✕.</b>
-
-
-
-  <sub>visitors 0 · house 0 · draws 0</sub> · <sub>last move: @JuniorrBraga</sub>
-</div>
-<!-- JOGO:FIM -->
-
-<div align="center">
-
-<br>
+<br><br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/cobra.svg">
@@ -37,7 +15,11 @@
 
 <br><br>
 
-<img src="https://skillicons.dev/icons?i=ts,js,nodejs,react,nextjs,python,postgres,supabase,docker,git,linux,vercel&perline=12" alt="tech stack">
+<img src="https://streak-stats.demolab.com?user=JuniorrBraga&theme=dark&hide_border=true&background=0D1117&stroke=1E2C3E&ring=F2A33C&fire=F2A33C&currStreakLabel=F2A33C&sideLabels=8FA6BD&dates=6E8299&currStreakNum=E8EEF6&sideNums=E8EEF6" alt="commit streak">
+
+<br><br>
+
+<img src="https://skillicons.dev/icons?i=ts,js,nodejs,react,nextjs,python,postgres,supabase,docker,git,linux,vercel&perline=12&theme=dark" alt="tech I use">
 
 <br><br>
 
@@ -45,5 +27,7 @@
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:bragajuniordev@gmail.com)
 
 <sub><a href="./README.md">em português</a></sub>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0C131D,50:1E3A5F,100:F2A33C&height=120&section=footer&reversal=false" width="100%" alt="">
 
 </div>
