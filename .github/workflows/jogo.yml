@@ -48,13 +48,13 @@ jobs:
       - name: Publicar o tabuleiro
         if: steps.jogada.outputs.codigo == '0'
         run: |
-          if git diff --quiet; then
-            echo "Nada mudou."
-            exit 0
-          fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md README.en.md jogo/estado.json
+          if git diff --cached --quiet; then
+            echo "Nada mudou."
+            exit 0
+          fi
           git commit -m "jogo: ${TITULO} por @${USUARIO}"
           git push
         env:

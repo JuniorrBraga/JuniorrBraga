@@ -32,12 +32,14 @@ jobs:
 
       - name: Publicar se mudou
         run: |
-          if git diff --quiet -- assets/cobra.svg; then
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # git add ANTES de comparar: "git diff" não enxerga arquivo novo,
+          # e o gráfico ficava escrito no disco sem nunca ser publicado.
+          git add assets/cobra.svg
+          if git diff --cached --quiet; then
             echo "Nenhuma mudança no gráfico."
             exit 0
           fi
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/cobra.svg
           git commit -m "cobra: gráfico de $(date -u +%d/%m/%Y)"
           git push
