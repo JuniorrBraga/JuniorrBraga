@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/terminal.svg" alt="terminal typing who I am" width="100%">
+<img src="./assets/terminal.svg" alt="terminal: Claude building an agent that qualifies WhatsApp leads" width="100%">
 
 <br>
 

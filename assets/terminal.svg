@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 336" width="1000" height="336"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 390" width="1000" height="390"
      role="img" aria-labelledby="tt dd">
-  <title id="tt">Terminal de Junior Braga</title>
-  <desc id="dd">Um terminal digita sozinho: quem sou, o que eu faço, e o convite para ver o resto da página.</desc>
+  <title id="tt">Junior Braga construindo uma automação com o Claude</title>
+  <desc id="dd">Um terminal mostra o Claude montando um agente que qualifica leads no WhatsApp: webhook com fila, perguntas de triagem e entrega do lead quente ao vendedor.</desc>
 
   <style>
     .t { font: 400 17px ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
@@ -13,50 +13,48 @@
   </style>
 
   <defs>
-    <clipPath id="c0"><rect x="0" y="60" width="0" height="34">
-      <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;156;156" keyTimes="0;0.0296;0.0963;1"/>
+    <clipPath id="c0"><rect x="0" y="60" width="0" height="36">
+      <animate attributeName="width" dur="16.0s" repeatCount="indefinite"
+               values="0;0;686;686" keyTimes="0;0.0312;0.1562;1"/>
     </rect></clipPath>
-    <clipPath id="c1"><rect x="0" y="100" width="0" height="34">
-      <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;530;530" keyTimes="0;0.1185;0.2222;1"/>
+    <clipPath id="c1"><rect x="0" y="102" width="0" height="36">
+      <animate attributeName="width" dur="16.0s" repeatCount="indefinite"
+               values="0;0;455;455" keyTimes="0;0.1812;0.2625;1"/>
     </rect></clipPath>
-    <clipPath id="c2"><rect x="0" y="140" width="0" height="34">
-      <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;233;233" keyTimes="0;0.2519;0.3333;1"/>
+    <clipPath id="c2"><rect x="0" y="144" width="0" height="36">
+      <animate attributeName="width" dur="16.0s" repeatCount="indefinite"
+               values="0;0;584;584" keyTimes="0;0.2812;0.3688;1"/>
     </rect></clipPath>
-    <clipPath id="c3"><rect x="0" y="180" width="0" height="34">
-      <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;684;684" keyTimes="0;0.3630;0.5037;1"/>
+    <clipPath id="c3"><rect x="0" y="186" width="0" height="36">
+      <animate attributeName="width" dur="16.0s" repeatCount="indefinite"
+               values="0;0;584;584" keyTimes="0;0.3937;0.4812;1"/>
     </rect></clipPath>
-    <clipPath id="c4"><rect x="0" y="220" width="0" height="34">
-      <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;222;222" keyTimes="0;0.5333;0.6074;1"/>
+    <clipPath id="c4"><rect x="0" y="228" width="0" height="36">
+      <animate attributeName="width" dur="16.0s" repeatCount="indefinite"
+               values="0;0;595;595" keyTimes="0;0.5062;0.5938;1"/>
     </rect></clipPath>
-    <clipPath id="c5"><rect x="0" y="260" width="0" height="34">
-      <animate attributeName="width" dur="13.5s" repeatCount="indefinite"
-               values="0;0;695;695" keyTimes="0;0.6370;0.8000;1"/>
+    <clipPath id="c5"><rect x="0" y="270" width="0" height="36">
+      <animate attributeName="width" dur="16.0s" repeatCount="indefinite"
+               values="0;0;400;400" keyTimes="0;0.6312;0.7062;1"/>
     </rect></clipPath>
   </defs>
 
-  <rect width="1000" height="336" rx="16" fill="#0C131D"/>
-  <rect x="0.75" y="0.75" width="998.5" height="334.5" rx="15.25" fill="none" stroke="#1E2C3E" stroke-width="1.5"/>
-  <line x1="0" y1="40" x2="1000" y2="40" stroke="#1E2C3E" stroke-width="1.5"/>
-  <text class="barra" x="20" y="26" fill="#4E647E">~/junior</text>
+  <rect width="1000" height="390" rx="16" fill="#0C131D"/>
+  <rect x="0.75" y="0.75" width="998.5" height="388.5" rx="15.25" fill="none" stroke="#1E2C3E" stroke-width="1.5"/>
+  <line x1="0" y1="42" x2="1000" y2="42" stroke="#1E2C3E" stroke-width="1.5"/>
+  <text class="barra" x="20" y="27" fill="#4E647E">~/junior</text>
+  <text class="barra" x="980" y="27" text-anchor="end" fill="#D97757">claude</text>
 
-  <text class="t" x="44" y="86" fill="#E8EEF6" clip-path="url(#c0)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">whoami</tspan></text>
-  <text class="t" x="44" y="126" fill="#8FA6BD" clip-path="url(#c1)">junior braga · especialista em GoHighLevel</text>
-  <text class="t" x="44" y="166" fill="#E8EEF6" clip-path="url(#c2)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">cat sobre.txt</tspan></text>
-  <text class="t" x="44" y="206" fill="#8FA6BD" clip-path="url(#c3)">bots, automação e coisas que rodam sozinhas de madrugada</text>
-  <text class="t" x="44" y="246" fill="#E8EEF6" clip-path="url(#c4)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">ls diversao/</tspan></text>
-  <text class="t" x="44" y="286" fill="#3DD68C" clip-path="url(#c5)">cobra.svg  madrugada.svg  →  tá tudo mexendo aqui embaixo</text>
+  <text class="t" x="44" y="88" fill="#E8EEF6" clip-path="url(#c0)"><tspan fill="#F2A33C">$</tspan><tspan dx="11">claude "cria um agente que qualifica lead no whatsapp"</tspan></text>
+  <text class="t" x="44" y="130" fill="#C7D3E0" clip-path="url(#c1)"><tspan fill="#D97757">●</tspan><tspan dx="11">entendi. montando em três partes.</tspan></text>
+  <text class="t" x="74" y="172" fill="#8FA6BD" clip-path="url(#c2)"><tspan fill="#3DD68C">✓</tspan><tspan dx="11">webhook do whatsapp → fila com retentativa</tspan></text>
+  <text class="t" x="74" y="214" fill="#8FA6BD" clip-path="url(#c3)"><tspan fill="#3DD68C">✓</tspan><tspan dx="11">agente pergunta nome, cidade e necessidade</tspan></text>
+  <text class="t" x="74" y="256" fill="#8FA6BD" clip-path="url(#c4)"><tspan fill="#3DD68C">✓</tspan><tspan dx="11">lead quente entra no CRM e avisa o vendedor</tspan></text>
+  <text class="t" x="44" y="298" fill="#C7D3E0" clip-path="url(#c5)"><tspan fill="#D97757">●</tspan><tspan dx="11">pronto. rodando em produção.</tspan></text>
 
-  <rect class="cursor" x="44" y="271" width="10" height="20" fill="#3DD68C" opacity="0">
-    <animate attributeName="opacity" dur="13.5s" repeatCount="indefinite"
-             values="0;0;1;1" keyTimes="0;0.6370;0.6407;1"/>
-    <animate attributeName="x" dur="13.5s" repeatCount="indefinite"
-             values="44;44;600;600"
-             keyTimes="0;0.6370;0.8000;1"/>
-    <animate attributeName="fill-opacity" values="1;1;0;1" dur="1.05s" repeatCount="indefinite"/>
+  <rect x="44" y="346" width="640" height="5" rx="2.5" fill="#1B2A3C"/>
+  <rect x="44" y="346" width="0" height="5" rx="2.5" fill="#D97757" opacity="0.9">
+    <animate attributeName="width" dur="16.0s" repeatCount="indefinite"
+             values="0;0;640;640" keyTimes="0;0.2562;0.7062;1"/>
   </rect>
 </svg>
