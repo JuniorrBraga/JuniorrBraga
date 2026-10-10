@@ -1,37 +1,33 @@
 <div align="center">
 
-<img src="./assets/terminal.svg" alt="terminal: o Claude montando um agente que qualifica leads no WhatsApp" width="100%">
+<img src="./assets/assinatura.svg" width="100%" alt="Junior Braga — o nome escrito ao vivo por 160 epiciclos de uma série de Fourier, em SVG puro">
 
-<br>
+<br><br>
 
-<img src="./assets/madrugada.svg" alt="cena de madrugada: código rolando, café fumegando e o gato dormindo" width="100%">
+<img src="./assets/absurdo.gif" width="100%" alt="9 000 partículas: poeira em espiral que vira o nome Junior Braga, depois um atrator de Lorenz, depois um hipercubo 4D girando. Cada quadro é uma função pura do tempo.">
+
+<br><br>
+
+<img src="./assets/laboratorio.svg" width="100%" alt="Laboratório: tesseract 4D, atrator de Lorenz e a glider gun de Gosper, calculados pelo navegador sem JavaScript">
+
+<br><br>
+
+<img src="./assets/painel.svg" width="100%" alt="Produção: contribuições, projetos, repositórios e pull requests, redesenhado todo dia por GitHub Actions">
 
 <br><br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/cobra-escura.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/cobra.svg">
-  <img src="./assets/cobra.svg" alt="uma cobra comendo meu gráfico de contribuições" width="100%">
+  <img src="./assets/cobra-escura.svg" width="100%" alt="uma cobra comendo o gráfico de contribuições">
 </picture>
 
 <br><br>
 
-<img src="https://streak-stats.demolab.com?user=JuniorrBraga&theme=dark&hide_border=true&background=0D1117&stroke=1E2C3E&ring=F2A33C&fire=F2A33C&currStreakLabel=F2A33C&sideLabels=8FA6BD&dates=6E8299&currStreakNum=E8EEF6&sideNums=E8EEF6" alt="sequência de dias commitando">
+<img src="./assets/fim.svg" width="100%" alt="você não precisava entender. só ver rodando.">
 
 <br><br>
 
-<img src="./assets/stack.svg" alt="tecnologias que eu uso" width="100%">
-
-<br><br>
-
-<img src="./assets/neymar-1.gif" width="150" alt="">
-<img src="./assets/neymar-2.gif" width="150" alt="">
-<img src="./assets/neymar-3.gif" width="150" alt="">
-
-<br><br>
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/junior-braga/)
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3A5F,100:F2A33C&height=130&section=footer" width="100%" alt="">
+<sub><a href="https://www.linkedin.com/in/junior-braga/">linkedin</a></sub>
 
 </div>

@@ -1,6 +1,6 @@
 name: Cobra do gráfico de contribuições
 
-# Configuração padrão da ação (paleta e velocidade originais), igual ao
+# Paleta do perfil (vazio, osso e verde-ácido); velocidade original, igual ao
 # passo a passo de referência:
 # https://github.com/GabrielaZanetti/animacaoCobrinha
 #
@@ -33,8 +33,8 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            assets/cobra.svg
-            assets/cobra-escura.svg?palette=github-dark
+            assets/cobra.svg?color_snake=#060608&color_dots=#ebedf0,#e3f7b0,#c8ff2e,#8fbf10,#4d6b00
+            assets/cobra-escura.svg?palette=github-dark&color_snake=#c8ff2e&color_dots=#111114,#1f2a0a,#3d5410,#7fa81c,#c8ff2e
 
       - name: Aparar a moldura onde a cobra fica fora da grade
         run: python3 scripts/aparar-cobra.py assets/cobra.svg assets/cobra-escura.svg

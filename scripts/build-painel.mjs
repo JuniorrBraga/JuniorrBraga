@@ -2,7 +2,7 @@
 // Gera assets/painel.svg com números reais da API do GitHub.
 // Roda diariamente pela Action em .github/workflows/painel.yml.
 
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -12,12 +12,9 @@ const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const SAIDA = resolve(RAIZ, "assets/painel.svg");
 
 const COR = {
-  fundo: "#0A0E1A",
-  fio: "#243350",
-  sinal: "#FFB020",
-  dado: "#4DD8C0",
-  tinta: "#E8EDF7",
-  mudo: "#6E7E99",
+  fundo: "#060608", // vazio
+  tinta: "#ECE8DC", // osso
+  sinal: "#C8FF2E", // o único destaque
 };
 
 const MES_CURTO = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
@@ -126,121 +123,52 @@ async function coletar() {
   };
 }
 
+// Fontes embutidas (o GitHub mostra o SVG como <img>: fonte externa não carrega).
+const fonte = (arq) => readFileSync(resolve(RAIZ, "assets/fontes", arq)).toString("base64");
+
 function desenhar(d) {
-  const X0 = 130;
-  const LARGURA = 960;
-  const BASE = 404;
-  const ALTURA_MAX = 104;
-
+  // vazio preto, linhas cor de osso, UM verde-ácido (o mês atual e o sinal que varre as barras)
+  const X0 = 64, LARGURA = 1072, BASE = 452, ALTURA_MAX = 130;
   const pico = Math.max(1, ...d.meses.map((m) => m.total));
-  const vao = 26;
-  const larguraBarra = (LARGURA - vao * (d.meses.length - 1)) / d.meses.length;
-
-  const barras = d.meses
-    .map((m, i) => {
-      const x = X0 + i * (larguraBarra + vao);
-      const alt = m.total === 0 ? 3 : Math.max(8, Math.round((m.total / pico) * ALTURA_MAX));
-      const y = BASE - alt;
-      const atual = i === d.meses.length - 1;
-      const preenche = m.total === 0 ? COR.fio : atual ? "url(#barraAtual)" : "url(#barra)";
-      const valor =
-        m.total === 0
-          ? ""
-          : `<text class="mono valor" x="${x + larguraBarra / 2}" y="${y - 11}" text-anchor="middle" fill="${
-              atual ? COR.sinal : COR.mudo
-            }">${m.total}</text>`;
-      return `    <rect x="${x}" y="${y}" width="${larguraBarra.toFixed(1)}" height="${alt}" rx="3" fill="${preenche}"/>
-    <rect class="brilho" style="animation-delay:${(i * 0.16).toFixed(2)}s" x="${x}" y="${y}" width="${larguraBarra.toFixed(
-        1
-      )}" height="${alt}" rx="3" fill="url(#pulso)"/>
-${valor}
-    <text class="mono mes" x="${x + larguraBarra / 2}" y="${BASE + 26}" text-anchor="middle" fill="${
-        atual ? COR.tinta : COR.mudo
-      }">${m.rotulo}</text>`;
-    })
-    .join("\n");
-
-  const metricas = [
-    { n: d.noAno, r: `PROJETOS EM ${d.anoAtual}`, destaque: true },
-    { n: d.repos, r: "REPOSITÓRIOS" },
-    { n: d.contribuicoes, r: "CONTRIBUIÇÕES · 12M" },
-    { n: d.prs, r: "PULL REQUESTS · 12M" },
-  ]
-    .map((m, i) => {
-      const x = X0 + i * 240;
-      return `  <text class="sans numero" x="${x}" y="${152}" fill="${m.destaque ? COR.sinal : COR.tinta}">${m.n}</text>
-  <text class="mono rotulo" x="${x + 2}" y="${180}">${m.r}</text>`;
-    })
-    .join("\n");
-
+  const vao = 22, lb = (LARGURA - vao * (d.meses.length - 1)) / d.meses.length;
+  const barras = d.meses.map((m, i) => {
+    const x = X0 + i * (lb + vao), alt = m.total === 0 ? 1 : Math.max(6, Math.round((m.total / pico) * ALTURA_MAX));
+    const y = BASE - alt, atual = i === d.meses.length - 1;
+    return `<rect x="${x.toFixed(1)}" y="${y}" width="${lb.toFixed(1)}" height="${alt}" fill="${atual ? COR.sinal : "none"}" stroke="${atual ? COR.sinal : COR.tinta}" stroke-opacity="${atual ? 1 : 0.5}"/>
+<rect class="var" style="animation-delay:${(i * 0.18).toFixed(2)}s" x="${x.toFixed(1)}" y="${y}" width="${lb.toFixed(1)}" height="${alt}" fill="${COR.sinal}"/>
+${m.total ? `<text class="j" x="${(x + lb / 2).toFixed(1)}" y="${y - 10}" text-anchor="middle" font-size="15" fill="${atual ? COR.sinal : COR.tinta}" fill-opacity="${atual ? 1 : 0.6}">${m.total}</text>` : ""}
+<text class="j" x="${(x + lb / 2).toFixed(1)}" y="${BASE + 28}" text-anchor="middle" font-size="14" fill="${COR.tinta}" fill-opacity="${atual ? 0.9 : 0.4}">${m.rotulo}</text>`;
+  }).join("\n");
+  const met = [
+    { n: d.contribuicoes, r: "contribuições · 12 meses" },
+    { n: d.noAno, r: `projetos iniciados em ${d.anoAtual}` },
+    { n: d.repos, r: "repositórios" },
+    { n: d.prs, r: "pull requests · 12 meses" },
+  ].map((m, i) => {
+    const x = 64 + i * 276;
+    return `<g class="st" style="animation-delay:${(0.1 + i * 0.12).toFixed(2)}s"><text class="s" x="${x}" y="190" font-size="104" fill="${COR.tinta}">${m.n}</text>
+<text class="j" x="${x + 4}" y="224" font-size="15" fill="${COR.tinta}" fill-opacity=".5">${m.r}</text></g>`;
+  }).join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img" aria-label="Painel de produção: ${d.noAno} projetos iniciados em ${d.anoAtual}, ${d.repos} repositórios, ${d.contribuicoes} contribuições em 12 meses.">
-  <defs>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="1" fill="${COR.fio}"/>
-    </pattern>
-    <radialGradient id="vinheta" cx="40%" cy="45%" r="82%">
-      <stop offset="0%" stop-color="${COR.fundo}" stop-opacity="0"/>
-      <stop offset="100%" stop-color="${COR.fundo}" stop-opacity="0.7"/>
-    </radialGradient>
-    <linearGradient id="barra" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#3C5480"/>
-      <stop offset="100%" stop-color="#243350"/>
-    </linearGradient>
-    <linearGradient id="barraAtual" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="${COR.sinal}"/>
-      <stop offset="100%" stop-color="#B87610"/>
-    </linearGradient>
-    <linearGradient id="pulso" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="${COR.sinal}" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="${COR.sinal}" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="regua" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="${COR.sinal}"/>
-      <stop offset="6%" stop-color="${COR.sinal}"/>
-      <stop offset="14%" stop-color="${COR.fio}"/>
-      <stop offset="88%" stop-color="${COR.fio}"/>
-      <stop offset="100%" stop-color="${COR.fio}" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-
-  <style>
-    .mono { font-family: "SF Mono", SFMono-Regular, ui-monospace, Menlo, Consolas, "DejaVu Sans Mono", monospace; }
-    .sans { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-    .numero { font-size: 54px; font-weight: 800; letter-spacing: -1.6px; }
-    .rotulo { fill: ${COR.mudo}; font-size: 11px; letter-spacing: 2.2px; }
-    .titulo { fill: ${COR.mudo}; font-size: 11px; letter-spacing: 2.4px; }
-    .mes    { font-size: 11px; letter-spacing: 1.6px; }
-    .valor  { font-size: 12px; letter-spacing: 0.5px; }
-
-    /* Um pulso âmbar varre as barras da esquerda para a direita, no mesmo sentido da
-       esteira do header. A animação só acende um overlay sobre a barra: se o
-       renderizador congelar no primeiro quadro, o gráfico aparece inteiro em vez de sumir. */
-    .brilho { opacity: 0; animation: varre 5s linear infinite; }
-    @keyframes varre {
-      0%        { opacity: 0; }
-      4%        { opacity: 0.5; }
-      13%, 100% { opacity: 0; }
-    }
-    @media (prefers-reduced-motion: reduce) { .brilho { animation: none; } }
-  </style>
-
-  <rect x="1" y="1" width="1198" height="458" rx="22" fill="${COR.fundo}"/>
-  <rect x="1" y="1" width="1198" height="458" rx="22" fill="url(#grid)"/>
-  <rect x="1" y="1" width="1198" height="458" rx="22" fill="url(#vinheta)"/>
-  <rect x="1.5" y="1.5" width="1197" height="457" rx="21.5" fill="none" stroke="${COR.fio}" stroke-width="1"/>
-
-  <rect x="130" y="53" width="9" height="9" fill="${COR.sinal}"/>
-  <text class="mono rotulo" x="152" y="62">PAINEL DE PRODUÇÃO</text>
-  <text class="mono rotulo" x="1090" y="62" text-anchor="end">ATUALIZADO ${d.atualizado}</text>
-
-${metricas}
-
-  <rect x="130" y="212" width="960" height="2" fill="url(#regua)"/>
-
-  <text class="mono titulo" x="130" y="256">PROJETOS INICIADOS POR MÊS · ÚLTIMOS 12 MESES</text>
-  <line x1="130" y1="${BASE + 1}" x2="1090" y2="${BASE + 1}" stroke="${COR.fio}" stroke-width="1"/>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-label="Produção: ${d.contribuicoes} contribuições e ${d.prs} pull requests em 12 meses, ${d.noAno} projetos iniciados em ${d.anoAtual}, ${d.repos} repositórios.">
+<style>
+@font-face{font-family:S;src:url(data:font/woff2;base64,${fonte("InstrumentSerif-italic.woff2")}) format('woff2');font-style:italic}
+@font-face{font-family:J;src:url(data:font/woff2;base64,${fonte("JetBrainsMono-300.woff2")}) format('woff2')}
+.s{font-family:S,Georgia,serif;font-style:italic}.j{font-family:J,ui-monospace,monospace;font-weight:300}
+.st{animation:st 1s cubic-bezier(.16,1,.3,1) backwards}@keyframes st{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+/* um sinal verde-ácido varre as barras da esquerda para a direita (se congelar, o gráfico aparece inteiro) */
+.var{opacity:0;animation:var 4.2s steps(1) infinite}@keyframes var{0%{opacity:.85}4.6%,100%{opacity:0}}
+.pisca{animation:pisca 1.2s steps(1) infinite}@keyframes pisca{50%{opacity:.15}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="1200" height="520" fill="${COR.fundo}"/>
+${Array.from({ length: 21 }, (_, k) => `<line x1="${k * 60}" y1="0" x2="${k * 60}" y2="520" stroke="${COR.tinta}" stroke-opacity=".03"/>`).join("")}
+<text class="j" x="64" y="64" font-size="16" fill="${COR.tinta}" fill-opacity=".5">// produção · lido da API do GitHub, redesenhado todo dia às 03:00</text>
+<circle cx="1128" cy="59" r="4" fill="${COR.sinal}" class="pisca"/>
+<text class="j" x="1112" y="64" text-anchor="end" font-size="16" fill="${COR.tinta}" fill-opacity=".5">${d.atualizado}</text>
+${met}
+<text class="j" x="64" y="296" font-size="14" fill="${COR.tinta}" fill-opacity=".4">projetos iniciados por mês · últimos 12 meses</text>
+<line x1="${X0}" y1="${BASE}" x2="${X0 + LARGURA}" y2="${BASE}" stroke="${COR.tinta}" stroke-opacity=".5"/>
 ${barras}
 </svg>
 `;
