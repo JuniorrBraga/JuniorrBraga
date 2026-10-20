@@ -24,7 +24,7 @@
 
 <br><br>
 
-<img src="./assets/fim.svg" width="100%" alt="você não precisava entender. só ver rodando.">
+<img src="./assets/fim.svg" width="100%" alt="você não precisava entender. só ver rodando">
 
 <br><br>
 
